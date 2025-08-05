@@ -1,8 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Dashboard Boilerplate
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-latest-black)](https://ui.shadcn.com/)
 
-First, run the development server:
+A modern, fully-featured Next.js boilerplate with TypeScript, Tailwind CSS, and shadcn/ui components. Perfect for building dashboard applications, SaaS products, or any modern web application.
+
+## ✨ Features
+
+- 🚀 **Next.js 15** with App Router
+- 🔷 **TypeScript** for type safety
+- 🎨 **Tailwind CSS** for styling
+- 🧩 **shadcn/ui** components
+- 🌙 **Dark/Light mode** toggle
+- 📱 **Responsive design** with mobile support
+- ⚙️ **Centralized configuration** system
+- 🔒 **Authentication ready** (configurable providers)
+- 📊 **Analytics integration** (Google Analytics)
+- 🎯 **SEO optimized** with meta tags
+- 🔧 **Environment-based configuration**
+- 📝 **TypeScript interfaces** for type safety
+- 🎨 **Customizable theme** system
+- 🚦 **Feature flags** support
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 15](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Icons:** [Radix Icons](https://icons.radix-ui.com/) + [Lucide React](https://lucide.dev/)
+- **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Theme:** [next-themes](https://github.com/pacocoursey/next-themes)
+- **Fonts:** [Geist](https://vercel.com/font)
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/BlackJr-Git/next-js-dashboard-boilerplate.git
+cd next-js-dashboard-boilerplate
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+### 3. Set up environment variables
+
+```bash
+cp env.example .env.local
+```
+
+Edit `.env.local` with your configuration:
+
+```env
+# Site Information
+NEXT_PUBLIC_SITE_NAME="Your App Name"
+NEXT_PUBLIC_SITE_TITLE="Your App - Modern Web Application"
+NEXT_PUBLIC_SITE_DESCRIPTION="A modern web application built with Next.js, TypeScript, and Tailwind CSS."
+NEXT_PUBLIC_SITE_URL="https://yourapp.com"
+
+# API Configuration
+NEXT_PUBLIC_API_URL="https://api.yourapp.com"
+
+# Contact Information
+NEXT_PUBLIC_CONTACT_EMAIL="contact@yourapp.com"
+
+# Social Media (optional)
+NEXT_PUBLIC_GITHUB_URL="https://github.com/yourusername/yourapp"
+
+# Analytics (optional)
+NEXT_PUBLIC_GA_ID="G-XXXXXXXXXX"
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
@@ -10,27 +90,134 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see your application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                 # Next.js App Router
+│   ├── globals.css     # Global styles
+│   ├── layout.tsx      # Root layout
+│   └── page.tsx        # Home page
+├── components/         # Reusable components
+│   ├── ui/            # shadcn/ui components
+│   └── mode-toggle.tsx # Theme toggle
+├── config/            # Configuration
+│   └── index.ts       # Centralized config
+├── hooks/             # Custom React hooks
+└── lib/               # Utility functions
+    └── utils.ts       # Helper utilities
+```
 
-## Learn More
+## ⚙️ Configuration
 
-To learn more about Next.js, take a look at the following resources:
+The boilerplate uses a centralized configuration system located in `src/config/index.ts`. This allows you to:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 🔧 Configure site information, branding, and contact details
+- 🎨 Customize theme colors and fonts
+- 🔗 Set up social media links
+- 🚦 Enable/disable features with feature flags
+- 📊 Configure analytics and SEO settings
+- 🔒 Set up authentication providers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Key Configuration Sections:
 
-## Deploy on Vercel
+1. **Site Information** - Name, title, description, URL
+2. **Branding** - Logo paths, favicon, colors
+3. **Contact** - Email, phone, address
+4. **Social Media** - Links to social platforms
+5. **Authentication** - Login paths, providers, session settings
+6. **Navigation** - Main, footer, and mobile menus
+7. **Theme** - Colors, fonts, styling
+8. **API** - Base URLs, endpoints, timeout settings
+9. **Features** - Feature flags for enabling/disabling functionality
+10. **Analytics** - Google Analytics and tracking configuration
+11. **SEO** - Meta tags, Open Graph, Twitter cards
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Updating Site Information
+
+1. Update environment variables in `.env.local`
+2. Modify `src/config/index.ts` for additional customization
+3. Replace logo files in `public/images/`
+4. Update favicon and other icons in `public/`
+
+### Adding New Pages
+
+1. Create new page in `src/app/`
+2. Add navigation links in `src/config/index.ts`
+3. Update TypeScript interfaces if needed
+
+### Styling
+
+- Modify `tailwind.config.ts` for theme customization
+- Update CSS variables in `src/app/globals.css`
+- Use the configuration system for consistent theming
+
+## 🔧 Available Scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run registry:build # Build component registry
+```
+
+## 📦 Adding Components
+
+This boilerplate uses shadcn/ui. Add new components:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Set environment variables in Vercel dashboard
+4. Deploy automatically on every push
+
+### Other Platforms
+
+- **Netlify:** Connect GitHub repo and set build command to `npm run build`
+- **Railway:** Deploy directly from GitHub
+- **Docker:** Use the included Dockerfile (if available)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org/) - The React framework
+- [shadcn/ui](https://ui.shadcn.com/) - Beautiful UI components
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Radix UI](https://www.radix-ui.com/) - Low-level UI primitives
+
+## 📞 Support
+
+If you have any questions or need help, please:
+
+- 📧 Email: [contact@yourapp.com](mailto:juniorassosa@gmail.com)
+- 🐛 Open an issue on [GitHub](https://github.com/BlackJr-Git/next-js-dashboard-boilerplate/issues)
+- 💬 Start a discussion on [GitHub Discussions](https://github.com/BlackJr-Git/next-js-dashboard-boilerplate/discussions)
+
+---
+
+**Happy coding! 🚀**
